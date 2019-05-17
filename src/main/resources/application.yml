@@ -1,0 +1,32 @@
+---
+micronaut:
+  application:
+    name: gorm-hasone
+  server:
+    port: 8181
+
+---
+hibernate:
+  show_sql: true
+  hbm2ddl:
+    auto: update
+  cache:
+    queries: false
+    use_second_level_cache: false
+    use_query_cache: false
+    # region.factory_class: org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory
+dataSource:
+  url: jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE
+  pooled: true
+  jmxExport: true
+  driverClassName: org.h2.Driver
+  username: sa
+  password: ''
+#
+#datasources:
+#  default:
+#    url: jdbc:mysql://127.0.0.1:3306/gorm_has?useUnicode=true
+#    username: soteria
+#    password: soteria
+#    dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+#    driverClassName: com.mysql.jdbc.Driver

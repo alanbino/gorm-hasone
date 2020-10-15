@@ -14,7 +14,7 @@ class GormHasOneController {
 
     @Get("/triggerHasOne")
     boolean triggerHasOne() {
-        gormHasOneService.triggerHasOne()
+        gormHasOneService.list()
         return true
     }
 }
